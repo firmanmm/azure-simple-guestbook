@@ -26,5 +26,4 @@ $connectionSetting =  array(
     'driver' => 'sqlsrv' 
 );
 
-//$conn = DriverManager::getConnection($connectionSetting, $config);
 $conn = new PDO("sqlsrv:server = ".$connectionSetting['host']."; Database = ".$connectionSetting['dbname'], $connectionSetting['user'], $connectionSetting['password']);
