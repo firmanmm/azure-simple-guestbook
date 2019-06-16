@@ -1,0 +1,13 @@
+{
+    "name": "rendoru/azure-simple-guestbook",
+    "authors": [
+        {
+            "name": "Rendoru",
+            "email": "maulana.firman56@gmail.com"
+        }
+    ],
+    "require": {
+        "doctrine/dbal": "^2.9",
+        "vlucas/phpdotenv": "^3.3"
+    }
+}
