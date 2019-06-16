@@ -25,7 +25,7 @@ $connectionSetting =  array(
     'password' => \getenv('DB_PASS'),
     'host' => \getenv('DB_HOST'),
     'post' => \getenv('DB_PORT'),
-    'driver' => 'pdo_sqlsrv' 
+    'driver' => 'sqlsrv' 
 );
 
 $conn = DriverManager::getConnection($connectionSetting, $config);
