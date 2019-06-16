@@ -17,8 +17,6 @@ try {
 } catch (\Exception $e){
     \define('PRODUCTION', true);
 }
-
-$config = new Configuration();
 $connectionSetting =  array(
     'dbname' => \getenv('DB_NAME'),
     'user' => \getenv('DB_USER'),
@@ -28,4 +26,5 @@ $connectionSetting =  array(
     'driver' => 'sqlsrv' 
 );
 
-$conn = DriverManager::getConnection($connectionSetting, $config);
+//$conn = DriverManager::getConnection($connectionSetting, $config);
+$conn = new PDO("sqlsrv:server = ".$connectionSetting['host']."; Database = ".$connectionSetting['dbname'], $connectionSetting['user'], $connectionSetting['password']);
